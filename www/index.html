@@ -16,50 +16,60 @@
 </head>
 
 <body>
-  <div id="app" class="color-theme-red theme-dark">
+  <div id="app" class="color-theme-green">
     <!--Für Darkmode: class="theme-dark"-->
     <!-- Views/Tabs container -->
     <div class="views tabs safe-areas">
       <!-- Tabbar for switching views-tabs -->
       <div class="toolbar toolbar-bottom tabbar-labels">
         <div class="toolbar-inner">
-          <a href="#view-cities" class="tab-link tab-link-active">
+          <a href="#view-countries" class="tab-link tab-link-active">
             <i class="f7-icons">star_fill</i>
-            <span class="tabbar-label">Cities</span>
+            <span class="tabbar-label">Countries</span>
           </a>
         </div>
       </div>
       <!-- Your main view/tab, should have "view-main" class. It also has "tab-active" class -->
-      <div id="view-cities" class="view view-main view-init tab tab-active" data-name="cities">
+      <div id="view-countries" class="view view-main view-init tab tab-active" data-name="countries">
         <div class="page">
           <!-- Top Navbar -->
           <div class="navbar">
             <div class="navbar-bg"></div>
             <div class="navbar-inner">
-              <div class="title">Cities</div>
+              <div class="title">Countries</div>
+              <div class="subnavbar">
+                <!-- Searchbar with auto init -->
+                <form class="searchbar">
+                  <div class="searchbar-inner">
+                    <div class="searchbar-input-wrap">
+                      <input type="search" placeholder="Search">
+                      <i class="searchbar-icon"></i>
+                      <span class="input-clear-button"></span>
+                    </div>
+                    <span class="searchbar-disable-button if-not-aurora">Cancel</span>
+                  </div>
+                </form>
+              </div>
             </div>
           </div>
-          <div class="page-content infinite-scroll-content">
-            <div class="list inset">
-              <ul id="cities-list">
-              </ul>
-            </div>
-            <!--Insert [REVIEWS]content here-->
+        <div class="page-content infinite-scroll-content">
+          <!-- Searchbar backdrop -->
+          <div class="list media-list inset">
+            <p id="last-update"><p>
+            <ul id="countries-list">
+
+            </ul>
           </div>
+          <!--Insert [REVIEWS]content here-->
         </div>
       </div>
     </div>
   </div>
+          </div>
+  <!--jQuery-->
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
   <!--framework7 bundle-->
   <script src="framework7/js/framework7.bundle.min.js"></script>
-  <!--firebase sdk-->
-  <script src="https://www.gstatic.com/firebasejs/7.9.1/firebase-app.js"></script>
-  <!--firebase authentification-->
-  <script src="https://www.gstatic.com/firebasejs/7.9.1/firebase-auth.js"></script>
-  <!--firebase storage-->
-  <script src="https://www.gstatic.com/firebasejs/7.9.1/firebase-storage.js"></script>
-  <!--firebase database-->
-  <script src="https://www.gstatic.com/firebasejs/7.9.1/firebase-database.js"></script>
   <!-- routes  -->
   <script src="js/routes.js"></script>
   <!-- app scripts -->
