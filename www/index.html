@@ -23,14 +23,34 @@
       <!-- Tabbar for switching views-tabs -->
       <div class="toolbar toolbar-bottom tabbar-labels">
         <div class="toolbar-inner">
-          <a href="#view-countries" class="tab-link tab-link-active">
+          <a href="#view-global" class="tab-link tab-link-active">
+            <i class="f7-icons">map_fill</i>
+            <span class="tabbar-label">Global</span>
+          </a>
+          <a href="#view-countries" class="tab-link">
             <i class="f7-icons">star_fill</i>
             <span class="tabbar-label">Countries</span>
           </a>
         </div>
       </div>
       <!-- Your main view/tab, should have "view-main" class. It also has "tab-active" class -->
-      <div id="view-countries" class="view view-main view-init tab tab-active" data-name="countries">
+      <div id="view-global" class="view view-main view-init tab tab-active" data-name="global">
+        <div class="page">
+          <!-- Top Navbar -->
+          <div class="navbar">
+            <div class="navbar-bg"></div>
+            <div class="navbar-inner">
+              <div class="title">Global</div>
+            </div>
+          </div>
+          <div class="page-content infinite-scroll-content">
+            <div id="global-infections" class="block-title block-title-large"></div>
+            <div class="block-header">Infected People</div>
+          </div>
+        </div>
+      </div>
+      <!-- Your main view/tab, should have "view-main" class. It also has "tab-active" class -->
+      <div id="view-countries" class="view view-init tab" data-view="countries">
         <div class="page">
           <!-- Top Navbar -->
           <div class="navbar">
@@ -52,20 +72,24 @@
               </div>
             </div>
           </div>
-        <div class="page-content infinite-scroll-content">
-          <!-- Searchbar backdrop -->
-          <div class="list media-list inset">
-            <p id="last-update"><p>
-            <ul id="countries-list">
-
-            </ul>
+          <div class="page-content infinite-scroll-content">
+            <!-- Searchbar backdrop -->
+            <div class="list media-list inset">
+              <p id="last-update"></p>
+              <p class="segmented segmented-strong">
+                <button id="order-by-infections" class="col button button-fill color-green">Infections</button>
+                <button id="order-by-deaths" class="col button button-fill color-green">Deaths</button>
+                <button id="order-by-alphabet" class="col button button-fill color-green">Alphabet</button>
+              </p>
+              <ul id="countries-list">
+              </ul>
+            </div>
+            <!--Insert [REVIEWS]content here-->
           </div>
-          <!--Insert [REVIEWS]content here-->
         </div>
       </div>
     </div>
   </div>
-          </div>
   <!--jQuery-->
   <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
   <!--framework7 bundle-->
