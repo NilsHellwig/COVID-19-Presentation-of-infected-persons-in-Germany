@@ -1,31 +1,5 @@
 # COVID-19 Tracker
 
-## Framework7 CLI Options
-
-Framework7 app created with following options:
-
-```
-{
-  "cwd": "/Users/Nils_Hellwig/Library/Mobile Documents/com~apple~CloudDocs/Pool/3. Semester/Multimedia Engineering/COVID-19-Presentation-of-infected-persons-in-Germany",
-  "type": [
-    "web"
-  ],
-  "name": "COVID-19 Tracker",
-  "framework": "core",
-  "template": "tabs",
-  "bundler": false,
-  "cssPreProcessor": false,
-  "theming": {
-    "customColor": false,
-    "color": "#007aff",
-    "darkTheme": true,
-    "iconFonts": true,
-    "fillBars": false
-  },
-  "customBuild": false
-}
-```
-
 ## NPM Scripts
 
 * 🔥 `start` - run development server
